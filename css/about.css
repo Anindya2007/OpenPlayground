@@ -1,6 +1,10 @@
 /* ===============================
    About Page Styles - OpenPlayground
    =============================== */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding:10px 30px 10px 30px
+}
 
 .contributor-github-icon {
     position: absolute;
@@ -90,12 +94,12 @@
     position: relative;
     overflow: visible !important;
 }
+
 .mentor-card:hover {
     box-shadow:
         0 12px 30px rgba(99, 102, 241, 0.18),
         0 4px 12px rgba(0, 0, 0, 0.06);
 }
-
 
 /* ===============================
    Scroll To Top Button
@@ -177,4 +181,200 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.hero-badge{
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    border-radius:50px;
+    color:rgb(217, 114, 12);
+    background:linear-gradient(
+        to right,
+        rgb(251, 238, 215),
+        white,
+        white,
+        rgb(251,238,215),
+        white,
+        white,
+        rgb(251, 238, 215)
+    );
+    font-weight:bold;
+    font-size:20px;
+    margin-bottom:0px;
+    border:1px solid rgb(217, 114, 12);
+    padding:5px;
+    width:300px
+}
+
+.hero-subtitle{
+    text-align: center;
+    font-size:18px;
+    width:600px;
+    margin:0px auto 50px auto;
+    color:rgb(101, 100, 100);
+    line-height:25px;
+}
+
+.projects-section{
+    padding:20px 40px 20px 40px;
+    display:grid;
+    grid-template-rows:1fr 3fr;
+    width:fit-content;
+    text-align:center;
+    margin:5px auto 30px auto;
+    width:1300px;
+    border-radius:20px;
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.07),
+        0 10px 25px rgba(0, 0, 0, 0.08),
+        0 20px 40px rgba(255, 115, 0, 0.06);
+}
+
+.steps-grid{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.section-badge{
+    color:rgb(194, 103, 12);
+    font-weight:bold;
+    font-size:23px;
+    margin-bottom:5px;
+}
+
+.section-subtitle{
+    font-weight: bold;
+    font-size:25px;
+    margin-top:5px;
+    margin: 10px auto 30px auto;
+}
+
+.section-subtitle::after{
+    content:'———';
+    width:70px;
+    height:8px;
+    font-weight:bolder;
+    color:#eb8817;
+    display:block;
+    margin:20px auto 0px auto;
+}
+
+.steps-grid h4 {
+    font-size:22px;
+    margin:0 0 10px 0
+}
+
+.steps-grid p {
+    font-size:16px;
+    color:grey;
+    width:100%;
+    max-width:250px;
+    margin:0 auto;
+    line-height:1.5;
+    overflow-wrap:anywhere
+}
+
+.step-card{
+    border-radius:20px;
+    padding:20px 16px;
+    text-align: center;
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.07),
+        0 10px 25px rgba(0, 0, 0, 0.08),
+        0 20px 40px rgba(255, 115, 0, 0.06);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    min-height:280px;
+    overflow:hidden
+}
+
+.step-card i{
+    width:76px;
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:36px;
+    color:#cd5b0a;
+    background-color:rgba(249, 215, 180,1);
+    border-radius:20px;
+    padding:0;
+    margin:10px auto 14px auto;
+    line-height:1;
+    flex-shrink:0
+}
+
+@media (max-width: 1024px) {
+
+    .projects-section{
+        width:100%;
+        padding:20px
+    }
+
+    .steps-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:24px
+    }
+}
+
+@media (max-width: 768px) {
+
+    .steps-grid {
+        grid-template-columns:1fr;
+        gap:16px
+    }
+
+    .step-card {
+        min-height:auto
+    }
+
+    .hero-subtitle {
+        width:100%;
+        max-width:600px;
+        padding:0 12px
+    }
+}
+
+.contribute-section{
+    border:1px solid black;
+    margin:30px auto 30px auto;
+    padding:10px 30px 10px 30px;
+    text-align: center;
+}
+
+.hero-stats{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    border-radius:20px
+}
+
+.section-title{
+    font-size:40px;
+    margin:10px 0px 10px 0px
+}
+
+.step-icon i{
+    width:76px;
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:36px;
+    color:#cd5b0a;
+    background-color:rgba(249, 215, 180,1);
+    border-radius:20px;
+    padding:0;
+    margin:10px auto 14px auto;
+    line-height:1;
+    flex-shrink:0
+}
+
+.stat{
+    border:1px solid black
 }
