@@ -338,3 +338,171 @@ body{
 .stat-label{font-size:25px;}
 
 .contributors-section{border-radius:20px; margin:30px auto 50px auto;  padding:10px 30px 10px 30px;  text-align: center;box-shadow:0 4px 10px rgba(0, 0, 0, 0.07),0 10px 25px rgba(0, 0, 0, 0.08),0 20px 40px rgba(255, 115, 0, 0.06);}
+
+@media (max-width: 1024px) {
+    body {
+        padding: 10px 20px;
+    }
+
+    .hero-content h1.hero-title,
+    .hero-content h1.gradient-text {
+        font-size: 42px !important;
+        line-height: 1.2;
+    }
+
+    .projects-section {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin: 10px auto 30px auto;
+    }
+
+    .contribute-section,
+    .contributors-section {
+        padding: 10px 20px;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 8px 12px;
+    }
+
+    .hero-badge {
+        width: 100%;
+        max-width: 320px;
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    .hero-content h1.hero-title,
+    .hero-content h1.gradient-text {
+        font-size: 32px !important;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 8px auto 30px auto;
+        padding: 0 6px;
+    }
+
+    .projects-section {
+        grid-template-rows: auto auto;
+        padding: 16px 12px;
+        margin: 10px auto 24px auto;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .step-card {
+        min-height: auto;
+        padding: 18px 12px;
+    }
+
+    .step-card i,
+    .step-icon i {
+        width: 62px;
+        height: 62px;
+        font-size: 30px;
+        border-radius: 16px;
+    }
+
+    .section-badge {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+
+    .section-subtitle {
+        font-size: 18px;
+        margin: 8px auto 20px auto;
+    }
+
+    .contribute-section,
+    .contributors-section {
+        margin: 20px auto 28px auto;
+        padding: 10px 12px;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .stat {
+        margin: 6px 0;
+        padding: 16px 10px;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    .stat-label {
+        font-size: 18px;
+    }
+
+    .contributors-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1.hero-title,
+    .hero-content h1.gradient-text {
+        font-size: 26px !important;
+    }
+
+    .hero-badge {
+        font-size: 14px;
+        max-width: 280px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+    }
+
+    .section-subtitle::after {
+        margin-top: 12px;
+    }
+
+    .step-card i,
+    .step-icon i {
+        width: 56px;
+        height: 56px;
+        font-size: 26px;
+        border-radius: 14px;
+    }
+
+    #scrollToTopBtn {
+        width: 52px;
+        height: 52px;
+        right: 14px;
+        bottom: 14px;
+    }
+}
