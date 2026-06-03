@@ -1,53 +1,232 @@
-* {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    margin: 0;
-    background: #f4f6f8;
-    color: #333;
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    background:
+    radial-gradient(circle at top left,#2563eb 0%,transparent 30%),
+    radial-gradient(circle at bottom right,#7c3aed 0%,transparent 30%),
+    #0f172a;
+    color:white;
+    overflow-x:hidden;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background: #1f2933;
-    color: #fff;
+/* ================= HEADER ================= */
+
+header{
+    text-align:center;
+    padding:40px 20px 20px;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
+header h1{
+    font-size:3rem;
+    font-weight:700;
+    background:linear-gradient(to right,#60a5fa,#c084fc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:10px;
 }
 
-.input-section {
-    margin-bottom: 20px;
+header p{
+    color:#cbd5e1;
+    font-size:1rem;
 }
 
-textarea {
-    width: 100%;
-    min-height: 140px;
-    padding: 10px;
-    resize: vertical;
+/* ================= CONTAINER ================= */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:20px 0 50px;
 }
 
-button {
-    padding: 12px 20px;
-    font-size: 16px;
-    cursor: pointer;
+/* ================= CARD STYLE ================= */
+
+.input-section,
+.result-section{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(14px);
+    border-radius:24px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.25),
+    inset 0 1px 1px rgba(255,255,255,0.08);
+    transition:0.3s ease;
 }
 
-.result-section {
-    margin-top: 30px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 6px;
+.input-section:hover,
+.result-section:hover{
+    transform:translateY(-5px);
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.35);
 }
 
-#score {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.input-section h2,
+.result-section h2{
+    margin-bottom:18px;
+    font-size:1.4rem;
+    color:#f8fafc;
+}
+
+/* ================= TEXTAREA ================= */
+
+textarea{
+    width:100%;
+    min-height:180px;
+    border:none;
+    outline:none;
+    resize:vertical;
+    padding:18px;
+    border-radius:18px;
+    background:#111827;
+    color:white;
+    font-size:15px;
+    line-height:1.7;
+    transition:0.3s ease;
+    border:2px solid transparent;
+}
+
+textarea:focus{
+    border-color:#60a5fa;
+    box-shadow:0 0 20px rgba(96,165,250,0.35);
+}
+
+/* ================= BUTTON ================= */
+
+button{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:18px;
+    background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.35s ease;
+    margin-top:10px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 12px 24px rgba(59,130,246,0.35);
+}
+
+button::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,0.15);
+    transition:0.5s;
+}
+
+button:hover::before{
+    left:100%;
+}
+
+button:hover{
+    transform:translateY(-4px) scale(1.01);
+    box-shadow:0 18px 35px rgba(59,130,246,0.45);
+}
+
+button:disabled{
+    opacity:0.7;
+    cursor:not-allowed;
+}
+
+/* ================= SCORE ================= */
+
+#score{
+    width:170px;
+    height:170px;
+    margin:25px auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2.8rem;
+    font-weight:700;
+    background:conic-gradient(
+        #3b82f6 0deg,
+        #8b5cf6 220deg,
+        #1e293b 220deg
+    );
+    color:white;
+    box-shadow:
+    0 10px 30px rgba(59,130,246,0.35);
+}
+
+/* ================= SKILLS ================= */
+
+h3{
+    margin-top:25px;
+    margin-bottom:14px;
+    color:#e2e8f0;
+}
+
+ul{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    padding:0;
+    list-style:none;
+}
+
+li{
+    padding:10px 16px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:500;
+    transition:0.3s ease;
+}
+
+/* matched */
+#matchedSkills li{
+    background:rgba(34,197,94,0.15);
+    color:#4ade80;
+    border:1px solid rgba(34,197,94,0.3);
+}
+
+/* missing */
+#missingSkills li{
+    background:rgba(239,68,68,0.15);
+    color:#f87171;
+    border:1px solid rgba(239,68,68,0.3);
+}
+
+li:hover{
+    transform:scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2.2rem;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    #score{
+        width:140px;
+        height:140px;
+        font-size:2.2rem;
+    }
+
+    textarea{
+        min-height:150px;
+    }
 }
